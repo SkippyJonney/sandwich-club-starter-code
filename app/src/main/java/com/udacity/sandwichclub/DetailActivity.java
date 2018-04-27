@@ -38,6 +38,9 @@ public class DetailActivity extends AppCompatActivity {
         String json = sandwiches[position];
         Sandwich sandwich = JsonUtils.parseSandwichJson(json);
         if (sandwich == null) {
+            //What is being sent to JasonUtils
+            Toast.makeText(this,json,Toast.LENGTH_LONG).show();
+            //https://stackoverflow.com/questions/43551974/java-how-to-access-json-inner-child-array
             // Sandwich data unavailable
             closeOnError();
             return;
